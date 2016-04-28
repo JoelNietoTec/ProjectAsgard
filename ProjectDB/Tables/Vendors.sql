@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[Vendors]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Name] NVARCHAR(150) NOT NULL, 
+    [EnrollmentDate] DATETIME NOT NULL
+)
