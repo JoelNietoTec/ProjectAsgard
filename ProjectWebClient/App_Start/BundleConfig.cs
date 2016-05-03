@@ -9,26 +9,26 @@ namespace ProjectWebClient
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.validate*"));
-
-            // Utilice la versión de desarrollo de Modernizr para desarrollar y obtener información. De este modo, estará
-            // preparado para la producción y podrá utilizar la herramienta de compilación disponible en http://modernizr.com para seleccionar solo las pruebas que necesite.
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
+                        "~/Scripts/jquery-{version}.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.min.js",
-                      "~/Scripts/respond.js",
+                      "~/Scripts/bootstrap.js",
                       "~/WinJS/js/base.min.js",
                       "~/WinJS/js/ui.min.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                     "~/Scripts/angular.min.js",
+                     "~/Scripts/angular-route.min.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/WinJS/css/ui-light.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/WinJS/Light").Include(
+                      "~/WinJS/css/ui-light.css"));
+
+            bundles.Add(new StyleBundle("~/WinJS/Dark").Include(
+                      "~/WinJS/css-light.css"));
         }
     }
 }

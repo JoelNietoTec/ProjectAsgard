@@ -16,11 +16,9 @@
     white-space: normal;
 }
 
-.center-block {
-    float: none;
-    margin: 0 auto;
-}
-
-.win-textbox {
-    width: 100% !important;
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
 }
