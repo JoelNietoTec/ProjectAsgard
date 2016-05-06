@@ -6,5 +6,8 @@ mainApp.run(function ($rootScope) {
 
 var configFunction = function ($routeProvider, $httpProvider) {
     $routeProvider.
-        when
+        when("/clients", {
+            templateUrl: "Clients/Index",
+            controller: "ClientsController"
+        })
 }

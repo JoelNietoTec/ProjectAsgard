@@ -9,7 +9,7 @@ namespace ProjectWebClient
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.min.js"));
+                        "~/Scripts/jquery-2.2.3.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
@@ -20,6 +20,10 @@ namespace ProjectWebClient
                      "~/Scripts/angular.min.js",
                      "~/Scripts/angular-route.min.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/AngularCode")
+                     .IncludeDirectory("~/Scripts/Controllers", "*.js")
+                     .Include("~/Scripts/AppCode.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
@@ -29,6 +33,8 @@ namespace ProjectWebClient
 
             bundles.Add(new StyleBundle("~/WinJS/Dark").Include(
                       "~/WinJS/css-light.css"));
+
+
         }
     }
 }

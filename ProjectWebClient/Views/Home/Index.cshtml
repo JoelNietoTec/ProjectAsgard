@@ -1,20 +1,21 @@
 ﻿<!DOCTYPE html>
-<html ng-app>
+<html ng-app="mainApp">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Project Asgard</title>
     @Styles.Render("~/Content/css")
     @Styles.Render("~/WinJS/Light")
+    
 </head>
 <body class="win-type-body">
     <div class="container win-container">
-        <input type="text" class="win-textbox" ng-model="hello" />
-        <h2 class="win-h2">{{hello}}</h2>
+        <ng-view></ng-view>
     </div>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/AngularCode")
 </body>
 
 </html>
